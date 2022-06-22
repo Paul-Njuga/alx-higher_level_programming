@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+"""Access and update private attribute: """
 class Square:
     """Represents a square.
     Private instance attribute: size:
