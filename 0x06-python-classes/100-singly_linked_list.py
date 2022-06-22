@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-
+"""Creates a Node of a singly linked list: """
 class Node:
     """Node of a singly linked list.
     Private instance attribute: data:
@@ -80,4 +80,4 @@ class SinglyLinkedList:
         while node.next_node and node.next_node.data < value:
             node = node.next_node
         new_node.next_node = node.next_node
-        node.next_node = 
+        node.next_node = new_node
