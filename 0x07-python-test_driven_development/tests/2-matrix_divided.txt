@@ -1,0 +1,124 @@
+# 2-matrix_divided.txt
+
+===========================
+How to Use 2-matrix_divided.py
+===========================
+
+This module defines an function divides all elements of a matrix ``matrix_divided(matrix, div)``.
+
+Usage
+=====
+
+``matrix_divided(...)``` returns the division of its two arguments. For numbers,
+that value is equivalent to using the ``/`` operator.
+---------------------
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [
+    ...     [1, 2, 3],
+    ...     [4, 5, 6]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+
+The function accepts that negative divisors
+
+::
+    >>> print(matrix_divided(matrix, -3))
+    [[-0.33, -0.67, -1.0], [-1.33, -1.67, -2.0]] 
+
+The divisor can be a floating number
+
+::
+
+    >>> print(matrix_divided(matrix, 2.5))
+    [[0.4, 0.8, 1.2], [1.6, 2.0, 2.4]]
+
+
+The matrix can be composed of several lists, as long as they are of the same length
+
+::
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [
+    ...     [5, 63, 0],
+    ...     [6, 3, 56],
+    ...     [8, 23, 5],
+    ...     [21, 54, 6]
+    ... ]
+    >>> print(matrix_divided(matrix, 7.8))
+    [[0.64, 8.08, 0.0], [0.77, 0.38, 7.18], [1.03, 2.95, 0.64], [2.69, 6.92, 0.77]]
+
+Matrix divide float('inf')
+
+::
+    >>> matrix = [
+    ...     [5, 63, 0],
+    ...     [6, 3, 56],
+    ...     [8, 23, 5],
+    ...     [21, 54, 6]
+    ... ]
+    >>> print(matrix_divided(matrix, float('inf')))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+
+Types of errors
+=====
+
+The divisor cannot be == 0
+
+::
+
+    >>> print(matrix_divided(matrix, 0))
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+The matrix must be proportional, otherwise it shows error
+
+::
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [
+    ...     [5, 63, 12],
+    ...     [6, 3, 56, 42, 54]
+    ... ]
+    >>> print(matrix_divided(matrix, 7.8))
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+Matrix string 
+
+::
+    >>> matrix = [
+    ...     [5, 63, 12],
+    ...     [6, 3, 56]
+    ... ]
+    >>> print(matrix_divided(matrix, "hello"))
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+
+The function does not accept string values
+
+::
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [
+    ...     [5, 63, "holberton"],
+    ...     [6, 3, 56, 42, 54]
+    ... ]
+    >>> print(matrix_divided(matrix, 7.8))
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Missing one paramater 
+
+::
+    >>> matrix = [
+    ...     [5, 63, 12],
+    ...     [6, 3, 56]
+    ... ]
+    >>> print(matrix_divided(" ", ))
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
