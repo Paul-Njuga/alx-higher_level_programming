@@ -1,13 +1,17 @@
 #!/usr/bin/python3
-"""
-Module add-integer
-Adds two integer together
+""" File name : 0-add_integer.py
+    Integers addition: function that adds 2 integers
+    Prototype: def add_integer(a, b=98)
+    You are not allowed to import any module
 """
 
 
 def add_integer(a, b=98):
-    """Returns the addition of a and b,
-    or an error if a and b are not integers or floats
+    """Return string with full name
+    first_name and last_name must be strings
+    Raises:
+        TypeError: first_name must be a string
+        TypeError: first_name must be a string
     """
 
     if type(a) is not int and type(a) is not float:
