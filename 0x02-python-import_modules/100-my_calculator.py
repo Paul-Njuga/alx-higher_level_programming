@@ -28,5 +28,6 @@ def calculator():
         res = div(a, b)
     print('{} {} {} = {}'.format(a, argv[2], b, res))
 
+
 if __name__ == "__main__":
     calculator()
