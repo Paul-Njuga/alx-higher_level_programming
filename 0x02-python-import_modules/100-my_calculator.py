@@ -2,30 +2,31 @@
 
 
 def calculator():
-    import sys
+    from sys import argv
     from calculator_1 import add, sub, mul, div
 
-    if len(sys.argv) != 4:
+    if (len(argv) - 1) != 3:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
 
-    ope = sys.argv[2]
-    if ope != '+' and ope != '-' and ope != '*' and ope != '/':
+    ops = ['+', '-', '*', '/']
+
+    if argv[2] not in ops:
         print('Unknown operator. Available operators: +, -, * and /')
         exit(1)
 
-    a = int(sys.argv[1])
-    b = int(sys.argv[3])
-    if ope == '+':
-        res = add(a, b)
-    if ope == '-':
-        res = sub(a, b)
-    if ope == '*':
-        res = mul(a, b)
-    if ope == '/':
-        res = div(a, b)
-    print('{} {} {} = {}'.format(a, ope, b, res))
+    a = int(argv[1])
+    b = int(argv[3])
 
+    if argv[2] == ops[0]:
+        res = add(a, b)
+    elif argv[2] == ops[1]:
+        res = sub(a, b)
+    elif argv[2] == ops[2]:
+        res = mul(a, b)
+    elif argv[2] == ops[3]:
+        res = div(a, b)
+    print('{} {} {} = {}'.format(a, argv[2], b, res))
 
 if __name__ == "__main__":
     calculator()
