@@ -7,6 +7,7 @@ class Square:
     Defines a Square.
     Private instance attribute: size
     Instantiation with optional size
+    Public instance method: def area(self)
     """
     def __init__(self, size=0):
         """
