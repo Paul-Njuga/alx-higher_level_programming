@@ -120,7 +120,7 @@ The function doesn't receive infinite arguments
 	Traceback (most recent call last):
 	OverflowError: cannot convert float infinity to integer
 
-The function doesn't receive float(NaN) arguments
+The function doesn't receive float('NaN') arguments
 
 ::
 	>>> add_integer(float('NaN'))
