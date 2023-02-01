@@ -1,0 +1,87 @@
+# 3-say_my_name.txt
+
+===========================
+How to use 3-say_my_name.py
+===========================
+
+This is module defines a print function ``say_my_name(first_name, last_name="")`` that prints "My name is ``first name`` ``last name``".
+
+Usage
+=====
+
+``def say_my_name(...)``` prints "My name is ``first name`` ``last name``".
+---------------------------------------------------------------------------
+
+Import the function
+
+::
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+The function receives a string as arguments
+
+::
+
+	>>> say_my_name("John", "Smith")
+	My name is John Smith
+
+If the function receives one argument, it adds a space to it
+
+::
+    >>> say_my_name("John")
+    My name is John 
+
+If the function receives an empty string it will read as a space 
+
+::
+    >>> say_my_name("", "Carlos")
+    My name is  Carlos
+
+    >>> say_my_name("Bob", "")
+    My name is Bob 
+
+The function receives other data types converted to string
+
+::
+	
+    >>> say_my_name(str(1.0), str(-2))
+    My name is 1.0 -2
+
+	>>> say_my_name(str('Nanya'), "Biz")
+	My name is Nanya Biz
+
+Types of errors
+===============
+
+If you receive non string data types, the error message is as shown
+
+::
+    >>> say_my_name(434, 332)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name(str(2.732323244), int(.9))
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+	>>> say_my_name({"Hello World"}, "White")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+    
+If the only parameter you receive is None, you will receive an error message
+
+::
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> say_my_name("Hello", None)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+If you do not receive any parameters you receive this error message
+
+::
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
