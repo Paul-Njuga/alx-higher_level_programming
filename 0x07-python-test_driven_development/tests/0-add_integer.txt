@@ -1,0 +1,121 @@
+# 0-add_integer.txt
+
+===========================
+How to use 0-add_integer.py
+===========================
+
+This is module defines an integer addition function ``add_integer(a, b=98)``.
+
+Usage
+=====
+
+``add_integer(...)``` returns the addition of its two arguments.
+For numbers, it is the same as using the ``+`` operator.
+----------------------------------------------------------------
+
+Import the function
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+The function receives positive numbers
+
+::
+
+	>>> add_integer(1, 2)
+	3
+
+The function receives negative numbers
+
+::
+	
+    >>> add_integer(8, -2)
+    6
+
+	>>> add_integer(-2, 12)
+	10
+
+The function receives float numbers
+
+::	
+    >>> add_integer(20.1, 30.2)
+    50
+
+    >>> add_integer(100.3, -2)
+    98
+
+The function receives numbers from different data types
+
+::	
+    >>> add_integer(30.3, 30)
+    60
+
+    >>> add_integer(100.3, -2)
+    98
+
+Argument ``b`` is optional and its default value is 98.
+If the function receives only one argument, it is added to said default value
+
+::	
+    >>> add_integer(7)
+    105
+
+	>>> add_integer(-8)
+	90
+
+    >>> add_integer(100.3)
+    198
+
+Types of errors
+===============
+
+The function does not receive string data
+
+::
+    >>> add_integer("One", 1)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(1, "Two")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+If the function receives neither an integer nor a float argument
+
+::
+    >>> add_integer("Hello", "World")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+The function expects at least one valid argument
+
+::
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+If ``b`` is None
+
+::
+    >>> add_integer(2, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+If no argument is passed to the function
+
+::
+	>>> add_integer()
+	Traceback (most recent call last):
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+The function doesn't receive infinite arguments
+
+::
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(2, float('-inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
