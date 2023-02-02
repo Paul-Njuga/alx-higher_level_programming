@@ -9,8 +9,12 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_regular(self):
         """Test with a regular list of ints: should return the max result"""
-        norm_list = [1, 2, 3]
-        self.assertEqual(max_integer(norm_list), 3)
+        max_end_list = [1, 2, 3]  #: Ordered list
+        max_middle_list = [1, 3, 2]  #: Unordered list
+        max_begin_list = [3, 2, 1] #: Reversed list
+        self.assertEqual(max_integer(max_end_list), 3)
+        self.assertEqual(max_integer(max_middle_list), 3)
+        self.assertEqual(max_integer(max_begin_list), 3)
 
     def test_unique(self):
         """Test with a list of one int: should return the value of this int"""
@@ -24,7 +28,9 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_negative(self):
         """Test with a list of negative ints: should return the max result"""
-        neg_list = [-1, -2, -3]
+        mixed_list = [1, -2, 3]  #: Mixed types
+        neg_list = [-1, -2, -3]  #: Same type
+        self.assertEqual(max_integer(mixed_list), 3)
         self.assertEqual(max_integer(neg_list), -1)
 
     def test_float(self):
