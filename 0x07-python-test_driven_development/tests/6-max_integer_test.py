@@ -59,7 +59,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(word_list), "World")
 
     def test_beg_space_list(self):
-        """Test with a list of strings with space: should return the string without spaces"""
+        """Test with a list of strings with space: should return the string without or with less spaces"""
         word_space_list = ["Hi     ", "World"]
         self.assertEqual(max_integer(word_space_list), "World")
 
