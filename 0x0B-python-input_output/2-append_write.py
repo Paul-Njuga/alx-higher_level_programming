@@ -2,7 +2,7 @@
 """Write to a file: """
 
 
-def append_file(filename="", text=""):
+def append_write(filename="", text=""):
     """Appends a string to a text file (UTF8).
     Returns:
         Number of characters written.
