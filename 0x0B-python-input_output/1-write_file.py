@@ -4,6 +4,9 @@
 
 def write_file(filename="", text=""):
     """Writes a string to a text file (UTF8).
+    Args:
+        filename: File to write to.
+        text (str): String to write.
     Returns:
         Number of characters written.
     """
