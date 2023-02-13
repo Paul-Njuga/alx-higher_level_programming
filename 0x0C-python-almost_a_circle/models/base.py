@@ -57,11 +57,11 @@ class Base:
         Args:
             json_string: JSON string rep
         """
-        l = []
+        my_list = []
         if json_string is not None or json_string != "":
-            l = json.loads(json_string)
-            return l
-        return l
+            my_list = json.loads(json_string)
+            return my_list
+        return my_list
 
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set.
