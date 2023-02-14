@@ -59,8 +59,9 @@ class Base:
         """
         my_list = []
         if json_string is not None or json_string != "":
+            if type(json_string) != str:
+                raise TypeError("json_string must be a string")
             my_list = json.loads(json_string)
-            return my_list
         return my_list
 
     def create(cls, **dictionary):
