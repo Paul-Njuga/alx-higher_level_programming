@@ -64,8 +64,23 @@ class Base:
             my_list = json.loads(json_string)
         return my_list
 
+    @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set.
         Args:
+            **dictionary (dict): Pointer to a dictionary.
         """
-        pass
+        if cls.__name__ == 'Rectangle':
+            dummy = cls(1, 1)
+        elif cls.__name__ == 'Square':
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances."""
+        filename = cls.__name__ + ".json"
+        check_file = os.path.exists(filename)
+        if check_file:
+            return cls.from_json_string(filename)
