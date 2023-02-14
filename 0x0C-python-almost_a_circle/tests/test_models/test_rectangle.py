@@ -11,7 +11,7 @@ from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
-    """Test class for Base class."""
+    """Test class for Rectangle class."""
 
     def setUp(self):
         Base._Base__nb_objects = 0
@@ -95,6 +95,7 @@ class TestRectangle(unittest.TestCase):
         r_dictionary = {'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
         self.assertEqual(len(r1_dictionary), len(r_dictionary))
         self.assertEqual(type(r1_dictionary), dict)
+
         r2 = Rectangle(1, 1)
         r2.update(**r1_dictionary)
         r2_dictionary = r2.to_dictionary()
