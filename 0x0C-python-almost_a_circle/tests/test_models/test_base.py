@@ -7,8 +7,6 @@ and the number of the test for that task
 """
 import unittest
 from models.base import Base
-from models.rectangle import Rectangle
-from models.square import Square
 
 
 class TestBase(unittest.TestCase):
@@ -45,6 +43,7 @@ class TestBase(unittest.TestCase):
         b1 = Base()
         self.assertEqual(type(b1), Base)
         self.assertTrue(isinstance(b1, Base))
+
 
 if __name__ == '__main__':
     unittest.main()
