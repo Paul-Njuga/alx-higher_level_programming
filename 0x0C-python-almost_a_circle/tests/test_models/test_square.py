@@ -28,7 +28,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s2.height, 10)
         self.assertEqual(s2.x, 20)
         self.assertEqual(s2.y, 30)
-        self.assertEqual(s1.id, 2)
+        self.assertEqual(s2.id, 2)
 
     def test_10_1(self):
         """Test Rectangle class: check for inheritance."""
@@ -61,7 +61,7 @@ class TestSquare(unittest.TestCase):
         """Test Square class: check for size attribute."""
 
         s1 = Square(5)
-        self.assertEqual(s1.size, 8)
+        self.assertEqual(s1.size, 5)
 
         s2 = Square(10, 8, 6, 4)
         self.assertEqual(s2.size, 10)
