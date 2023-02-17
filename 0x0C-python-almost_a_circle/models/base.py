@@ -58,6 +58,8 @@ class Base:
             json_string: JSON string rep
         """
         my_list = []
+        if json_string is None:
+            return my_list
         if json_string is not None or json_string != "":
             if type(json_string) != str:
                 raise TypeError("json_string must be a string")
