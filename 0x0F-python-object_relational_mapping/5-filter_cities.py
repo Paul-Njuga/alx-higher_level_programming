@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     cur = db.cursor()
     cur.execute("SELECT cities.name\
-                FROM states LEFT JOIN cities\
+                FROM cities LEFT JOIN states\
                 ON states.id = cities.state_id\
                 WHERE states.name=%s\
                 ORDER BY cities.id ASC", (argv[4],))
