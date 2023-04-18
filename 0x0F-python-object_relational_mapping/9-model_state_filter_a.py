@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Lists all State objects that contain the letter a from the database hbtn_0e_6_usa"""
+"""Lists all State objects that contain the letter a,
+from the database hbtn_0e_6_usa"""
 from sys import argv
 from sqlalchemy.orm import Session
 from model_state import Base, State
@@ -12,7 +13,7 @@ if __name__ == "__main__":
 
     session = Session(engine)
     for state in session.query(State)\
-        .filter(State.name.ike('%a%'))\
-        .order_by(State.id):
+                        .filter(State.name.ike('%a%'))\
+                        .order_by(State.id):
         print("{}: {}".format(state.id, state.name))
     session.close()
