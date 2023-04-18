@@ -13,5 +13,5 @@ if __name__ == "__main__":
 
     session = Session(engine)
     for state in session.query(State).filter(State.name == argv[4]).first():
-        print("{}: {}".format(state.id, state.name))
+        print("{}".format(state.id))
     session.close()
