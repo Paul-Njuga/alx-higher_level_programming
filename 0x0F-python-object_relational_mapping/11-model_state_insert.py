@@ -13,6 +13,7 @@ if __name__ == "__main__":
     session = Session(engine)
     new_state = State(name='Louisiana')
     session.add(new_state)
+    session.commit()
     state = session.query(State).filter_by(name='Louisiana').first()
     if state:
         print("{}".format(state.id))
