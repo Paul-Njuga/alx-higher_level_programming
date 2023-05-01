@@ -1,6 +1,6 @@
 # Network #1 :computer:
 
-This projects goes introduces the urllib & requests Python packages for making requests in Python.
+This projects introduces the urllib & requests Python packages for making requests in Python.
 
 ## Learning Objectives :bookmark_tabs:
 
