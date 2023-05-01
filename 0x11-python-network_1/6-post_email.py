@@ -8,5 +8,5 @@ if __name__ == "__main__":
 
     url = argv[1]
     email = {'email': argv[2]}
-    html = post(url, params=email)
+    html = post(url, data=email)
     print(html.text)
