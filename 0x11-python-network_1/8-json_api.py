@@ -3,7 +3,7 @@
 http://0.0.0.0:5000/search_user with the letter as a parameter'''
 
 if __name__ == "__main__":
-    from requests import exceptions, post
+    from requests import post
     from sys import argv
 
     url = 'http://0.0.0.0:5000/search_user'
@@ -18,5 +18,5 @@ if __name__ == "__main__":
             print('No result')
         else:
             print('[{}] {}'.format(json.get('id'), json.get('name')))
-    except exceptions.JSONDecodeError:
+    except ValueError:
         print('Not a valid JSON')
