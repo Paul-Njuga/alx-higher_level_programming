@@ -11,7 +11,7 @@ if __name__ == "__main__":
         letter = {'q': argv[1]}
     else:
         letter = {'q': ""}
-    html = post(url, params=letter)
+    html = post(url, data=letter)
     try:
         json = html.json()
         if json == {}:
