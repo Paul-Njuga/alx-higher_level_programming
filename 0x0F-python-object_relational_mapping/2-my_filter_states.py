@@ -10,6 +10,7 @@ import MySQLdb
 
 
 def main():
+    """Displays values where name matches state_name"""
     args = sys.argv
     conn = MySQLdb.connect(
         host="localhost",

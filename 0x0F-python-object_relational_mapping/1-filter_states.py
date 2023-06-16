@@ -9,6 +9,7 @@ import MySQLdb
 
 
 def main():
+    """Lists all states with name starting with upper N"""
     args = sys.argv
     conn = MySQLdb.connect(
         host="localhost",

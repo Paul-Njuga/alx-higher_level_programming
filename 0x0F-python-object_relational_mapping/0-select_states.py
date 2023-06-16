@@ -2,7 +2,7 @@
 """
 Get all states:
 
-Lists all states from hbtn_0e_0_usa
+Lists all states from hbtn_0e_0_usa.
 """
 import sys
 
