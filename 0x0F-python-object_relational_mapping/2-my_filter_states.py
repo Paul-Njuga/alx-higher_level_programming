@@ -21,10 +21,7 @@ def main():
         charset="utf8",
     )
     cur = conn.cursor()
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    state_name = args[4]
-    # Pass state_name as tuple not a list, bcs it's one value
-    cur.execute(query, (state_name,))
+    cur.execute("SELECT * FROM states WHERE name = {} ORDER BY id ASC", args[4])
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)

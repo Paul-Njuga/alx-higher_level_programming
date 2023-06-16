@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Filter states:
 
-Lists all states with name starting with upper N from hbtn_0e_0_usa.
+Lists all states with name starting with upper N
+from hbtn_0e_0_usa.
 """
 import sys
 
@@ -20,8 +21,7 @@ def main():
         charset="utf8",
     )
     cur = conn.cursor()
-    query = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
-    cur.execute(query)
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
