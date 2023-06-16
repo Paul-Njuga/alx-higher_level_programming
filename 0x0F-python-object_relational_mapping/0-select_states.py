@@ -10,6 +10,7 @@ import MySQLdb
 
 
 def main():
+    """Lists all states"""
     args = sys.argv
     conn = MySQLdb.connect(
         host="localhost",
