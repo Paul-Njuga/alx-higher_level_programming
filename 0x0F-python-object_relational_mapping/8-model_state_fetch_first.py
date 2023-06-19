@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""All states via SQLAlchemy:
+"""First state via SQLAlchemy:
 
-Lists all State objects from the database hbtn_0e_6_usa
+Prints the first State objects from the database hbtn_0e_6_usa
 """
 import sys
 
