@@ -25,11 +25,11 @@ if __name__ == "__main__":
     session = Session()
 
     cities = session\
-        .query(City.id, City.name, State.name.label('statesId'))\
+        .query(City.id, City.name, State.name.label('stateNm'))\
         .join(State)\
         .order_by(asc(City.id))\
         .all()
     for city in cities:
-        print("{}: ({}) {}".format(city.statesId, city.id, city.name))
+        print("{}: ({}) {}".format(city.stateNm, city.id, city.name))
 
     session.close()
