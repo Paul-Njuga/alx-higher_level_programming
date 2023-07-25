@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/* display the status code of a GET request */
+/* Displays the status code of a GET request */
 const args = process.argv.slice(2);
 
 if (args.length === 1) {
