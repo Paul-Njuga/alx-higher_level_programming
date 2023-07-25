@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/* Reads and prints the contents of a file */
+/* Writes a string to a file */
 const args = process.argv.slice(2);
 
 if (args.length === 2) {
@@ -10,8 +10,6 @@ if (args.length === 2) {
   fs.writeFile(filePath, dt, 'utf-8', (err) => {
     if (err) {
       console.error(err);
-    } else {
-      console.log(dt);
     }
   });
 }
