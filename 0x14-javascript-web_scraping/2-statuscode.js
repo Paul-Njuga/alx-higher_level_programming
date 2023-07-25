@@ -6,7 +6,11 @@ if (args.length === 1) {
   const url = args[0];
   const request = require('request');
   request(url, function (error, response) {
-    console.log('code:', response.statusCode);
+    if (error) {
+      console.log('code:', response.statusCode);
+    } else {
+      console.log('code:', response.statusCode);
+    }
   });
 } else {
   console.log('Usage: ./2-statuscode.js URL');
