@@ -8,7 +8,7 @@ const args = process.argv.slice(2);
 if (args.length === 1) {
   const url = args[0];
   let filmNum = 0;
-  const char = 'https://swapi-api.alx-tools.com/api/people/18/';
+  const char = 'http://swapi.co/api/people/18/';
   const request = require('request');
   request(url, function (error, _, body) {
     if (error) {
