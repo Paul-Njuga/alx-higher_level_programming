@@ -6,18 +6,19 @@
 const args = process.argv.slice(2);
 
 if (args.length === 1) {
+  const request = require('request');
   const url = args[0];
   let filmNum = 0;
-  const char = 'http://swapi.co/api/people/18/';
-  const request = require('request');
   request(url, function (error, _, body) {
     if (error) {
-      process.exit(1);
+      console.error(error);
     }
     const data = JSON.parse(body);
     for (const film of data.results) {
-      if (film.characters.includes(char)) {
-        filmNum++;
+      for (const character of film.characters) {
+        if (character.includes('18')) {
+          filmNum++;
+        }
       }
     }
     console.log(filmNum);
