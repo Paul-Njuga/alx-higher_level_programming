@@ -4,6 +4,10 @@ const myObject = {
   value: 12
 };
 console.log(myObject);
+/*
+'this' inside a function indicates,
+the function is a method to an object
+*/
 myObject.incr = function () {
   this.value++;
 };
