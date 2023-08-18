@@ -8,7 +8,6 @@ from hbtn_0e_0_usa.
 def main():
     """Lists all states with name starting with upper N"""
     from sys import argv as args
-
     import MySQLdb
 
     with MySQLdb.connect(
@@ -23,8 +22,8 @@ def main():
         # BINARY handles case sensitive comparisons
         cur.execute(
             "SELECT * FROM states\
-                    WHERE name LIKE BINARY 'N%'\
-                    ORDER BY id ASC"
+            WHERE name LIKE BINARY 'N%'\
+            ORDER BY id ASC"
         )
         query_rows = cur.fetchall()
         for row in query_rows:
