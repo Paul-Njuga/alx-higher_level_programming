@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 Get all states:
-
 Lists all states from hbtn_0e_0_usa.
 """
 
@@ -9,7 +8,6 @@ Lists all states from hbtn_0e_0_usa.
 def main():
     """Lists all states"""
     from sys import argv as args
-
     import MySQLdb
 
     with MySQLdb.connect(

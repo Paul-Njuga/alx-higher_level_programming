@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Filter states:
-
-Lists all states with name starting with upper N
+Lists all states with name starting with upper N,
 from hbtn_0e_0_usa.
 """
 
