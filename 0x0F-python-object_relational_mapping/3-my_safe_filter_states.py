@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """SQL Injection:
-
 Takes an argument & displays all values in states table of hbtn_0e_0_usa
 where name matches argument & is safe from MySQL injections.
 """
@@ -9,7 +8,6 @@ where name matches argument & is safe from MySQL injections.
 def main():
     """Displays values where name matches state_name"""
     from sys import argv as args
-
     import MySQLdb
 
     with MySQLdb.connect(
